@@ -1,0 +1,23 @@
+{
+  "name": "hentaibot-master",
+  "version": "1.0.0",
+  "description": "A hentai discord bot",
+  "main": "index.js",
+  "dependencies": {
+    "booru": "^2.0.3",
+    "discord.js": "^11.5.1",
+    "enmap": "^5.2.2",
+    "random-puppy": "^1.1.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "-help"
+  },
+  "keywords": [
+    "hentai"
+  ],
+  "author": "aaronokk",
+  "license": "ISC"
+}
