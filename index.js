@@ -1,16 +1,17 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
 const fs = require('fs');
+const { readdirSync } = require('fs')
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
-
 
 bot.login(config.token);
 
 // tornando config universal
 bot.config = config
 
-
+const evtFiles = readdirSync('./events/')
+console.log(`Carregando o total de ${evtFiles.length} eventos`)
 fs.readdir('./events', (err, files) => {
     if (err) console.error(err);
     
@@ -23,7 +24,8 @@ fs.readdir('./events', (err, files) => {
     });
 });
 
-
+const cmdFiles = readdirSync('./commands/')
+console.log(`Carregando o total de ${cmdFiles.length} comandos`)
 fs.readdir('./commands/', (err, files) => {
     if (err) {
         console.error(err);

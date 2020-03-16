@@ -16,6 +16,7 @@ module.exports = (bot, message) => {
     if (message.content === '!rip') {
         const attachment = new Discord.Attachment('https://i.imgur.com/w3duR07.png');
         message.channel.send(attachment);
+        message.channel.send("Rest in pussy");
         // const attachment = new Discord.Attachment('./rip.png');
         // message.channel.send(`${message.author},`, attachment);
 
