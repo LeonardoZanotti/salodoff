@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
-const config = require('../config.json');
+const config = require('../json/config.json');
 const moment = require('moment');
 require('moment-duration-format');
 const { stripIndents } = require('common-tags');
-const { getMember, formatDate } = require('../functions.js');
+const { getMember, formatDate } = require('../functions/functions.js');
 
 exports.run = (bot, message, args) => {
     let user = message.mentions.users.first() || message.author;

@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const snekfetch = require('snekfetch');
 const moment = require('moment');
-const config = require('../config.json');
+const config = require('../json/config.json');
 
 exports.run = async (bot,message, args) => {
     const text = await snekfetch.get(`https://thevirustracker.com/free-api?countryTotal=BR`);

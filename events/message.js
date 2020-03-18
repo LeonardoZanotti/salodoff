@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const links = require('../links.json');
+const links = require('../json/links.json');
 
 module.exports = (bot, message) => {
     // ping

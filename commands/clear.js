@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('../config.json');
+const config = require('../json/config.json');
 
 exports.run = (bot, message, args) => {
     // if (message.deletable) {

@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('../config.json');
+const config = require('../json/config.json');
 
 module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply('VO DESBANI N FALOU, VACILÃO MORRE CEDO');

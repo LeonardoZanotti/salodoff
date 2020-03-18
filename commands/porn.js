@@ -1,5 +1,5 @@
 const Discord = require ('discord.js');
-const porn = require('../porns.json');
+const porn = require('../json/porns.json');
 
 exports.run = (bot, message, args) => {
     let links = porn

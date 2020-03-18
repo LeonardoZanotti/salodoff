@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('./config.json');
+const config = require('./json/config.json');
 const fs = require('fs');
 const { readdirSync } = require('fs')
 const bot = new Discord.Client();
@@ -38,7 +38,3 @@ fs.readdir('./commands/', (err, files) => {
         bot.commands.set(props.help.name, props);
     });
 });
-
-
-// fazer uns áudio xingando o rigs e um comando que o bot entra na sala, xinga o gordo pelo áudio e mete o pé
-// fazer comandos de bot de música

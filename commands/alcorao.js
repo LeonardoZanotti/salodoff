@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const alcorao = require('../alcorao.json');
+const alcorao = require('../json/alcorao.json');
 const superagent = require("snekfetch");
-const config = require('../config.json');
+const config = require('../json/config.json');
 
 exports.run = (bot, message, args) => {
     if (args.length === 0) {
