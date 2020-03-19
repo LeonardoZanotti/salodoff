@@ -1,8 +1,7 @@
 const Discord = require ('discord.js');
-const porn = require('../json/porns.json');
+const links = require('../json/porns.json');
 
 exports.run = (bot, message, args) => {
-    let links = porn
     let url = links[Math.floor(Math.random() * links.length)]
     message.channel.send(url);
 };

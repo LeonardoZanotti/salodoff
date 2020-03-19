@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
 const alcorao = require('../json/alcorao.json');
-const superagent = require("snekfetch");
 const config = require('../json/config.json');
 
 exports.run = (bot, message, args) => {
     if (args.length === 0) {
-        args[0] = Math.floor(Math.random() * 24);
+        args[0] = Math.floor(Math.random() * Object.keys(alcorao).length);
     }
     
     responseObject = alcorao
