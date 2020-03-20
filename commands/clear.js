@@ -30,7 +30,7 @@ exports.run = (bot, message, args) => {
     //const attachment = new Discord.Attachment('https://media.discordapp.net/attachments/417040965488869379/661039442869485599/223777-1565717063.png');
 
     message.channel.bulkDelete(deleteAmount, true)   // true faz com que vc só ignore as mensagens com mais de 2 semanas pq vc n consegue deletar elas
-        .then(deleted => message.channel.send(`Deletei ${deleted.size} mensagens fodase`)).then(m => m.delete(5000))
+        .then(deleted => message.channel.send(`Deletei ${deleted.size} mensagens fodase`)).then(m => m.delete(2000))
         .catch(err => message.reply(`Você fez bosta e não deletei porra nenhumakk [${err}]`))
 }
 

@@ -7,10 +7,10 @@ exports.run = async (bot, message, args) => {
     //for(i = 0; i < ncage.length + 1; i++){
         const embed = new Discord.RichEmbed()
             .setColor('RANDOM')
-            //.setImage(ncage[i]);
+            //.setImage(ncage[args[0]]);
             .setImage(ncage[Math.floor(Math.random() * ncage.length)]);
         return message.channel.send(embed);
-        // await message.channel.send(embed).then(m => m.delete(5000));
+        // await message.channel.send(embed)//.then(m => m.delete(5000));
     //}
 }
 
