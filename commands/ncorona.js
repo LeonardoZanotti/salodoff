@@ -7,8 +7,8 @@ exports.run = async (bot,message, args) => {
     const text = await snekfetch.get(`https://thevirustracker.com/free-api?countryTotal=BR`);
     const body = text.body;
     let max = Object.keys(body.countrynewsitems[0]).length - 1;
-    let min = max - 200;
-    let number = Math.floor(Math.random() * (max - min)) + min + 1;
+    let min = parseInt(max) - Math.floor(max/2);
+    let number = Math.floor(Math.random() * (max - min)) + min;
     let embed = new Discord.RichEmbed()
     .setColor('#ff1111')
 	.setTitle('Notícias Corona Vírus')

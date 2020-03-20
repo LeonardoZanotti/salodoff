@@ -14,6 +14,6 @@ exports.run = (bot, message, args) => {
 }
 
 exports.help = {
-    name: 'análise',
+    name: 'analise',
     description: 'análise'
 }

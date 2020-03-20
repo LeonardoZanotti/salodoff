@@ -19,9 +19,9 @@ const signs = [
 
 exports.run = async (bot, message, args) => {
         const sign = args[0];
-        if (!sign) return message.channel.send("Insira um signo depois do comando!");
+        if (!sign) return message.channel.send("Insira um signo depois do comando! (capricorn, aquarius, pisces, aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius)");
 
-        if (!signs.includes(sign.toLowerCase())) return message.channel.send('Isso aí nem é um signo');
+        if (!signs.includes(sign.toLowerCase())) return message.channel.send('Isso aí nem é um signo (capricorn, aquarius, pisces, aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius)');
 
         const text = await snekfetch.get(`http://sandipbgt.com/theastrologer/api/horoscope/${sign}/today`);
         const body = JSON.parse(text.body);
@@ -41,6 +41,6 @@ exports.run = async (bot, message, args) => {
 }
 
 exports.help = {
-    name: "horóscopo",
+    name: "horoscopo",
     description: `Envia informações do horóscopo. Uso: ${config.prefix} (capricorn, aquarius, pisces, aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius)`
 }
