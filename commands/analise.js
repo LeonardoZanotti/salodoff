@@ -1,7 +1,7 @@
 const Discord = require ('discord.js');
 
 exports.run = (bot, message, args) => {
-    let a = ["a1", "a2", "a3", "a4", "a5", "a6"];
+    let a = ["a0", "a1", "a2", "a3", "a4", "a5", "a6"];
     let b = a[Math.floor(Math.random() * a.length)]
     let embed = new Discord.RichEmbed()
       .setTimestamp()
