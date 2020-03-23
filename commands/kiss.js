@@ -35,5 +35,5 @@ exports.run = (bot, message, args) => {
 
 exports.help = {
     name: "kiss",
-    description: `"${config.prefix}kiss @membro" faz você abraçar um membro`
+    description: `"${config.prefix}kiss @membro" dá uma bitoquinha`
 }
