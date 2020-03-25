@@ -3,7 +3,7 @@ const config = require('../json/config.json');
 
 exports.run = (bot, message, args) => {
     if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply('KKKK c n pode bani ngm n man, fica flinston ae');
-    if (args.length === 0) return message.reply(`Utilize ${config.prefix}ban @membro [motivo]`);
+    if (args.length === 0) return message.reply(`Utilize ${bot.config.prefix}ban @membro [motivo]`);
     
     let banMember = message.mentions.members.first() || message.guild.members.get(args[0]);
         if (!banMember) return message.reply("Não foi possível encontrar esse membro!");
