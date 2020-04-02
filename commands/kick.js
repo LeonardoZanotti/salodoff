@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const config = require('../json/config.json');
 
 exports.run = (bot, message, args) => {
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply('Você n pode kickar ninguem n mano kkkkkkkk');
-    if (args.length === 0) return message.reply(`Utilize ${bot.config.prefix}kick @membro [motivo]`);
+    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply('Você n pode kickar ninguém n mano kkkkkkkk');
+    if (args.length === 0) return message.reply(`Utilize \`${bot.config.prefix}kick @membro [motivo]\``);
     
     let kickMember = message.mentions.members.first() || message.guild.members.get(args[0]);
         if (!kickMember) return message.reply("Não foi possível encontrar esse membro!");
@@ -27,5 +27,5 @@ exports.run = (bot, message, args) => {
 
 exports.help = {
     name: "kick",
-    description: `'${config.prefix}kick @membro [motivo]' expulsa um membro por um motivo`
+    description: `\`${config.prefix}kick @membro [motivo]\` expulsa um membro por um motivo`
 }

@@ -15,5 +15,5 @@ exports.run = async (bot, message, args) => {
 
 exports.help = {
     name: "nya",
-    description: "Gif de menininha gato anime Nya! Rigoni bixa"
+    description: "Gif de menininha gato anime Nya! Rigoni fagala"
 }

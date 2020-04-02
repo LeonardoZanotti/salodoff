@@ -48,5 +48,5 @@ exports.run = (bot, message, args) => {
 
 exports.help = {
     name: 'userinfo',
-    description: `'${config.prefix}userinfo' mostra informações do próprio usuário e '${config.prefix}userinfo @membro' mostra informações sobre um membro do servidor`
+    description: `\`${config.prefix}userinfo\` mostra informações do próprio usuário e \`${config.prefix}userinfo @membro\` mostra informações sobre um membro do servidor`
 }

@@ -4,7 +4,7 @@ const config = require('../json/config.json');
 module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply('VO DESBANI N FALOU, VACILÃO MORRE CEDO');
     if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply("Eu não tenho permissão para desbanir!");
-    if (args.length === 0) return message.reply(`Utilize ${bot.config.prefix}unban [id do usuário] [motivo]`);
+    if (args.length === 0) return message.reply(`Utilize \`${bot.config.prefix}unban [id do usuário] [motivo]\``);
     
     let unbanMember = await bot.users.get(args[0]) || await bot.fetchUser(args[0])
         if (!unbanMember) return message.reply("Não foi possível encontrar esse id de usuário!");
@@ -21,5 +21,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "unban",
-    description: `'${config.prefix}unban @membro [motivo]' desbane um membro e explicita o motivo`
+    description: `\`${config.prefix}unban @membro [motivo]\` desbane um membro e explicita o motivo`
 }

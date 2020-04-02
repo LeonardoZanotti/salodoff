@@ -54,5 +54,5 @@ module.exports.run = async(bot, message, args) => {
     
 module.exports.help = {
 	name: 'ping',
-	description: `${config.prefix}ping mostra a latência entre o envio/respota de mensagens (do bot) e a latência até o websocket (API)`
+	description: `\`${config.prefix}ping\` mostra a latência entre o envio/respota de mensagens (do bot) e a latência até o websocket (API)`
 }

@@ -5,9 +5,9 @@ exports.run = (bot, message, args) => {
     const data = []
     if (!args.length) {    
     comandos = bot.commands.map(r => `${bot.config.prefix}${r.help.name}`).join(", ");
-
+    
     message.channel.send(`Lista de comandos: ${comandos}`);
-    message.channel.send(`Se quiser ajuda sobre um determinado comando use ${bot.config.prefix}help [comando]`);
+    message.channel.send(`Se quiser ajuda sobre um determinado comando use \`${bot.config.prefix}help [comando]\``);
     }
     else {
     const name = args[0];
@@ -29,5 +29,5 @@ exports.run = (bot, message, args) => {
 
 exports.help = {
     name: "help",
-    description: `Lista todos os comandos do bot [${config.prefix}help] ou descreve um comando específico [${config.prefix}help (comando)]`
+    description: `\`${config.prefix}help\` lista todos os comandos do bot e \`${config.prefix}help (comando)\` descreve um comando específico`
 }
