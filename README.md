@@ -3,8 +3,7 @@
 If you want to put him on your discord server acess this [link](https://discord.com/oauth2/authorize?client_id=658551592613576705&scope=bot&permissions=2146958847)
 
 # Bot Icons:
-<img src="auxiliares-do-bot/bot-icons/salodoff.jpg" alt="Salodoff" width="400" height="400">
-<img src="auxiliares-do-bot/bot-icons/salodoff-test.png" alt="Salodoff Test" width="400" height="400">
+<img src="auxiliares-do-bot/bot-icons/salodoff.jpg" alt="Salodoff" width="400" height="400"> <img src="auxiliares-do-bot/bot-icons/salodoff-test.png" alt="Salodoff Test" width="400" height="400">
 
 This is a Discord bot in javascript (node.js). The code is free to view and anyone can study him to use in theirs bots.
 
