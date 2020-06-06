@@ -13,3 +13,9 @@ To install the bot dependencies use this comamnd in the bot directory:
 ```
 $ npm install
 ```
+
+Configure the ```config.json``` file and then do
+```
+$ node .
+```
+to start the bot.
