@@ -4,7 +4,7 @@ If you want to put him on your discord server acess this [link](https://discord.
 
 # Bot Icons:
 <div>
-<p>Salodoff</p>   <p>        Salodoff-Test</p>
+<strong>Salodoff        Salodoff-Test</strong>
 </div>
 
 <div>
