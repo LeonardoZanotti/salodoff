@@ -7,7 +7,7 @@ exports.run = async (bot, message, args) => {
         //message.channel.send(i);
         //await message.channel.send(url);
         let url = links[Math.floor(Math.random() * links.length)]
-        message.channel.send(url);
+        await message.channel.send(url);
     //}
 };
 
