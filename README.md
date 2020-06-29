@@ -17,12 +17,16 @@ My bot is on Discloud server, a free host of discord bots.
 
 ## Instalation
 
+### Requirements
+* Node.js v12.17.0 or higher;
+* Npm v6.14.4 or higher;
+
 To install the bot dependencies use this comamnd in the bot directory:
 ```
 $ npm install
 ```
 
-Configure the ```config.json``` file and then do
+Configure the ```config.json``` file with your bot token and then do
 ```
 $ node .
 ```
