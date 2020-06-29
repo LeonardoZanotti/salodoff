@@ -6,6 +6,10 @@ exports.run = async (bot, message, args) => {
         //let url = links[i];
         //message.channel.send(i);
         //await message.channel.send(url);
+        if (!message.channel.nsfw) {
+            return message.channel.send('Esse canal não é NSFW!');
+        }
+        
         let url = links[Math.floor(Math.random() * links.length)]
         await message.channel.send(url);
     //}
