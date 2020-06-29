@@ -18,8 +18,8 @@ My bot is on Discloud server, a free host of discord bots.
 ## Instalation
 
 ### Requirements
-* Node.js v12.17.0 or higher;
-* Npm v6.14.4 or higher;
+* Node.js v12.17.0 or higher
+* Npm v6.14.4 or higher
 
 To install the bot dependencies use this comamnd in the bot directory:
 ```
