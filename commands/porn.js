@@ -2,17 +2,12 @@ const Discord = require ('discord.js');
 const links = require('../json/porns.json');
 
 exports.run = async (bot, message, args) => {
-    //for(i = 0; i < links.length + 1; i++){
-        //let url = links[i];
-        //message.channel.send(i);
-        //await message.channel.send(url);
-        if (!message.channel.nsfw) {
-            return message.channel.send('Esse canal não é NSFW!');
-        }
-        
-        let url = links[Math.floor(Math.random() * links.length)]
-        await message.channel.send(url);
-    //}
+    if (!message.channel.nsfw) {
+        return message.channel.send('Esse canal não é NSFW!');
+    }
+    
+    let url = links[Math.floor(Math.random() * links.length)]
+    await message.channel.send(url);
 };
 
 exports.help = {

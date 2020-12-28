@@ -3,7 +3,6 @@ const moment = require('moment');
 moment.locale('pt-BR');
 
 exports.run = (bot, message, args) => {
-// module.expots.run = (bot, message, args) => {} também funciona
     let gAvatar = message.guild.iconURL;
     const user = message.author;
     
@@ -12,15 +11,20 @@ exports.run = (bot, message, args) => {
     let total = membros - bots
 
     let embed = new Discord.RichEmbed()
-
     .setTimestamp()
     .setTitle(`${message.guild.name}`)
     .setColor("RANDOM")
     .setThumbnail(gAvatar)
     .setDescription('Informações sobre o servidor')
-    .addField(`ID do servidor: `, message.guild.id)
-    // .addField(`Fundador do servidor: `, message.guild.owner)
-    .addField('Fundador do servidor:', 'José Samuel (Zeca)')
+    .addField(`ID do servidor:`, message.guild.id)
+    .addField('Mascote do servidor:', 'José Samuel')
+    .addField('Fundador do servidor:', 'Felipe Rocha')
+    .addField('Dono do servidor:', 'Godinho')
+    .addField('Streamer do servidor:', 'Rigoni')
+    .addField('Cara de TI do servidor:', 'Zanotti')
+    .addField('Piloto de caça do servidor:', 'Godinho')
+    .addField('Corno do servidor:', 'Godoy')
+    .addField('Consultor de vendas do servidor:', 'Yoshi')
     .addField('Região do servidor:', message.guild.region)   
     .addField('Servidor criado em:', moment(message.guild.createdAt).format('DD/MM/YYYY'))
     .addField(`${user.username} entrou no servidor em:`, moment(message.member.joinedAt).format('DD/MM/YYYY'))
@@ -30,17 +34,15 @@ exports.run = (bot, message, args) => {
     .addField('Humanos:', total, true)
     .addField('Bots:', bots, true)
     .addField('Total de membros:', membros, true)
-    .addField('Online', `:green_circle: ${message.guild.members.filter(o => o.presence.status === 'online').size} Online`, true)
-    .addField('Offline', `:red_circle: ${message.guild.members.filter(o => o.presence.status === 'offline').size} Offline`, true)
-    .addField('Idle', `:orange_circle: ${message.guild.members.filter(o => o.presence.status === 'idle').size} Idle`, true)
-    .addField('Do not Disturb', `:no_entry: ${message.guild.members.filter(o => o.presence.status === 'dnd').size} Do not Disturb`, true)
-    // .addField('Membros banidos: ', message.guild.banlist)
+    .addField('Admins Online', `:green_circle: ${message.guild.members.filter(o => o.presence.status === 'online').size} Online`, true)
+    .addField('Admins Offline', `:red_circle: ${message.guild.members.filter(o => o.presence.status === 'offline').size} Offline`, true)
+    .addField('Admins Idle', `:orange_circle: ${message.guild.members.filter(o => o.presence.status === 'idle').size} Idle`, true)
+    .addField('Admins Do not Disturb', `:no_entry: ${message.guild.members.filter(o => o.presence.status === 'dnd').size} Do not Disturb`, true)
     .setFooter('Serverinfo', bot.user.displayAvatarURL)
 
     message.channel.send(embed);
 }
 
-//module.exports.help = {name: 'sinfo'}
 exports.help = {
     name: 'serverinfo',
     description: `Informações sobre o servidor`

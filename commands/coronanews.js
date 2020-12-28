@@ -5,7 +5,8 @@ const config = require('../json/config.json');
 
 exports.run = async (bot,message, args) => {
     try {
-        const text = await snekfetch.get(`https://thevirustracker.com/free-api?countryTotal=BR`);
+        return message.channel.send('A porra da API de noticias morreu');
+        const text = await snekfetch.get(`https://documenter.getpostman.com/view/10808728/SzS8rjbcfree-api?countryTotal=BR`);
         const body = text.body;
         let max = Object.keys(body.countrynewsitems[0]).length - 1;
         let min = parseInt(max) - Math.floor(max/2);

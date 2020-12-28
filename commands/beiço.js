@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const actions = require('../json/actions.json');
-const snekfetch = require('snekfetch');
+const superagent = require('node-fetch');
 
 exports.run = async (bot, message, args) => {
     var recipient = args[0];
 
-    var text = await snekfetch.get(`https://rra.ram.moe/i/r?type=pout`);
-    var body = text.body;
+    var text = await superagent(`https://rra.ram.moe/i/r?type=pout`);
+    var body = await text.json();
 
     if (!recipient) {
         var embed = new Discord.RichEmbed()

@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
-const snekfetch = require('snekfetch');
+const superagent = require('node-fetch');
 
 exports.run = async (bot, message, args) => {
-    var res = await snekfetch.get("http://api.adviceslip.com/advice");
-    var advice = JSON.parse(res.body);
+    const res = await superagent("http://api.adviceslip.com/advice");
+    const advice = await res.json();
 
     try {
         const embed = new Discord.RichEmbed()
