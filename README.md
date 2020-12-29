@@ -28,7 +28,7 @@ $ npm install
 
 Configure the ```config.json``` file with your bot token and then do
 ```
-$ node .
+$ npm start
 ```
 to start the bot.
 
