@@ -26,7 +26,7 @@ To install the bot dependencies use this comamnd in the bot directory:
 $ npm install
 ```
 
-Configure the ```config.json``` file with your bot token (you can find the token [here](https://discord.com/developers/applications))and then do
+Configure the ```config.json``` file with your bot token (you can find the token [here](https://discord.com/developers/applications)) and then do
 ```
 $ npm start
 ```
