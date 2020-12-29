@@ -1,6 +1,6 @@
 {
   "name": "salodoff",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "If you want to put it on your discord server acess this [link](https://discord.com/oauth2/authorize?client_id=658551592613576705&scope=bot&permissions=2146958847)",
   "main": "index.js",
   "dependencies": {
