@@ -21,7 +21,7 @@ exports.run = async (bot, message, args) => {
                     .addField('Total de casos:\u200B', global.TotalConfirmed, true)
                     .addField('Novas mortes:\u200B', global.NewDeaths, true)
                     .addField('Total de mortes:\u200B', global.TotalDeaths, true)
-                    .addField('Novas recupeções:\u200B', global.NewRecovered, true)
+                    .addField('Novas recuperações:\u200B', global.NewRecovered, true)
                     .addField('Total de recuperados:\u200B', global.TotalRecovered, true)
                     .addField('Data de publicação:\u200B', moment(json.Date).format('DD/MM/YYYY'), true)
                     .setImage('https://cdn.startupi.com.br/wp-content/uploads/2018/09/startup-global.jpg')
