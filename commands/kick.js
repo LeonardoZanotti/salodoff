@@ -13,7 +13,7 @@ exports.run = (bot, message, args) => {
 
     if (message.mentions.members.first().id === bot.user.id) return message.channel.send('Vo me kickar n kkkkkk');
     if (message.mentions.members.first().id === message.author.id) return message.channel.send('Ta com depressão? Come um dogão');
-    if (message.mentions.members.first().id === message.guild.owner.id) return message.channel.send('Mano? KKKKKKKK vo kickar o dono do server n sifude')
+    if (message.mentions.members.first().id === message.guild.ownerID) return message.channel.send('Mano? KKKKKKKK vo kickar o dono do server n sifude');
     if (message.mentions.members.first().highestRole.calculatedPosition + 1 > message.member.highestRole.calculatedPosition) return message.channel.send(`Você não pode kickar **${kickMember}**! A rola dele é muito grande!`);
 
     try {

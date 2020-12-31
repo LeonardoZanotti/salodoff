@@ -13,7 +13,7 @@ exports.run = (bot, message, args) => {
 
     if (message.mentions.members.first().id === bot.user.id) return message.channel.send('Vo me banir n kkkkkk');
     if (message.mentions.members.first().id === message.author.id) return message.channel.send('Não desista. Geralmente é a última chave no chaveiro que abre a porta.');
-    if (message.mentions.members.first().id === message.guild.owner.id) return message.channel.send('Mano? KKKKKKKK vo bani o dono do server n sifude')
+    if (message.mentions.members.first().id === message.guild.ownerID) return message.channel.send('Mano? KKKKKKKK vo bani o dono do server n sifude');
     if (message.mentions.members.first().highestRole.calculatedPosition + 1 > message.member.highestRole.calculatedPosition) return message.channel.send(`Você não pode banir **${banMember}**! A rola dele é muito grande!`);
 
     try {

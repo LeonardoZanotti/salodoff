@@ -11,50 +11,19 @@ module.exports = (bot, message) => {
         (message.channel.send('ping!'));
     };
 
-
-    // rip
-    if (message.content === '!rip') {
-        const attachment = new Discord.Attachment('https://i.imgur.com/w3duR07.png');
-        message.channel.send(attachment);
-        message.channel.send("Rest in pussy");
-        // const attachment = new Discord.Attachment('./rip.png');
-        // message.channel.send(`${message.author},`, attachment);
-
-        // const buffer = fs.readFileSync('./memes.txt');
-        // const attachment = new Discord.Attachment(buffer, 'memes.txt');
-        // message.channel.send(`${message.author}, here are your memes!`, attachment);
-    };
-
-
     // Estrutura alternativa de mensagens
-    responseObject = links;
-    if (responseObject[message.content]) {
-        message.channel.send(responseObject[message.content]);
-    }; 
-
-
-    /*
-    if(comando === "!ping") {
-        message.channel.send("pong!");
+    let words = message.content.split(' ');
+    for (i = 0; i < words.length; i++) {
+        words[i] = words[i].toLowerCase().replace(',', '').replace('.', '');
+        if (links[words[i]]) {
+            message.channel.send(links[words[i]]);
+        }
     }
-
-    switch (comando) {
-        case "fb" :
-            message.channel.send("facebook.com/######");
-        break;
-
-        case "google" :
-            message.channel.send("www.google.com.br");
-        break;
-    }
-    */
-
 
     // zoar quem for escutar musickk
     if ((message.content.startsWith('!play')) || (message.content.startsWith('=play')) || (message.content.startsWith('p!play'))) {
         message.channel.send('Vai ouvir musiquinha ent? kkkkk tuts tuts');
     };
-
 
     // hater de dm e de outros bot
     if (message.author.bot || message.channel.type === 'dm') return;
@@ -66,11 +35,5 @@ module.exports = (bot, message) => {
     let arquivocmd = bot.commands.get(command.slice(bot.config.prefix.length));
         if (arquivocmd) {
             arquivocmd.run(bot, message, args);
-        };
-
-        
-    // Exemplo
-    // if (command = `${prefix}Salodoff`) {
-    //    message.channel.send('Salodoff: Bot criado por Leonardo Zanotti');
-    // }
+        };        
 };

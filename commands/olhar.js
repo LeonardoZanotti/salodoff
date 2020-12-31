@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const actions = require('../json/actions.json');
-const snekfetch = require('snekfetch');
+const superagent = require('node-fetch');
 
 exports.run = async (bot, message, args) => {
     var recipient = args[0];
@@ -19,8 +19,8 @@ exports.run = async (bot, message, args) => {
         return message.channel.send(`${message.author} olhou fixamente para... si mesmo..?`, embed);
 
     } else if (message.mentions.users.first() == bot.user) {
-        var text = await snekfetch.get(`https://rra.ram.moe/i/r?type=stare`);
-        var body = text.body;
+        var text = await superagent(`https://rra.ram.moe/i/r?type=stare`);
+        var body = await text.json();
 
         var embed = new Discord.RichEmbed()
             .setColor('#FBCFCF')
@@ -30,8 +30,8 @@ exports.run = async (bot, message, args) => {
 
     } else {
 
-        var text = await snekfetch.get(`https://rra.ram.moe/i/r?type=stare`);
-        var body = text.body;
+        var text = await superagent(`https://rra.ram.moe/i/r?type=stare`);
+        var body = await text.json();
 
         var embed = new Discord.RichEmbed()
             .setColor('#FBCFCF')
