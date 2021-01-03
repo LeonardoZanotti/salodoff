@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-var metralha = 1087;
+var metralha = 1537;
 // var metralha = 0
 
 exports.run = (bot, message, args) => {
