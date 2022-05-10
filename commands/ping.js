@@ -1,26 +1,31 @@
 const Discord = require('discord.js');
 const config = require('../json/config.json');
 
-module.exports.run = async(bot, message, args) => {
-		let embed = new Discord.RichEmbed()
-    	.setTitle('PING?')
-    	.setColor('ff0000')
-    	.addField(`O ping da API é de`, `${Math.round(bot.ping)} ms`)
-		.setFooter('Comando de ping', bot.user.displayAvatarURL);
-	
-		const ms = await message.channel.send(embed);
-		const clientms = ms.createdTimestamp - message.createdTimestamp; 	// tempo em que o ms foi criado - o que a message foi criada
+module.exports.run = async (bot, message, args) => {
+  try {
+    let embed = new Discord.RichEmbed()
+      .setTitle('PING?')
+      .setColor('ff0000')
+      .addField(`O ping da API é de`, `${Math.round(bot.ping)} ms`)
+      .setFooter('Comando de ping', bot.user.displayAvatarURL);
 
-		let embed1 = new Discord.RichEmbed()
-    	.setTitle('PONG!')
-    	.setColor('ff0000')
-		.addField(`O ping da API é de `, `${Math.round(bot.ping)} ms`)
-		.addField(`O ping do bot é de: `, `${clientms} ms`)
-		.setFooter('Comando de ping', bot.user.displayAvatarURL);
+    const ms = await message.channel.send(embed);
+    const clientms = ms.createdTimestamp - message.createdTimestamp; // tempo em que o ms foi criado - o que a message foi criada
 
-		ms.edit(embed1);
+    let embed1 = new Discord.RichEmbed()
+      .setTitle('PONG!')
+      .setColor('ff0000')
+      .addField(`O ping da API é de `, `${Math.round(bot.ping)} ms`)
+      .addField(`O ping do bot é de: `, `${clientms} ms`)
+      .setFooter('Comando de ping', bot.user.displayAvatarURL);
 
-	/*
+    ms.edit(embed1);
+  } catch (err) {
+    console.error(err);
+    return message.channel.send('Ocorreu um erro! Contate o administrador (Zanotto)!');
+  }
+
+  /*
 	const moment = require('moment');
 	require('moment-duration-format');
 	
@@ -33,8 +38,8 @@ module.exports.run = async(bot, message, args) => {
 		msg.edit('Pong! (${endTime-startTime} ms))
 	})
     */
-   
-    /*
+
+  /*
 	.setColor('#0099ff')
 	.setTitle('Some title')
 	.setURL('https://discord.js.org/')
@@ -50,9 +55,9 @@ module.exports.run = async(bot, message, args) => {
 	.setTimestamp()
 	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
     */
-}
-    
+};
+
 module.exports.help = {
-	name: 'ping',
-	description: `\`${config.prefix}ping\` mostra a latência entre o envio/respota de mensagens (do bot) e a latência até o websocket (API)`
-}
+  name: 'ping',
+  description: `\`${config.prefix}ping\` mostra a latência entre o envio/respota de mensagens (do bot) e a latência até o websocket (API)`,
+};

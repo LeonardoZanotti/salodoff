@@ -2,41 +2,35 @@ const Discord = require('discord.js');
 const actions = require('../json/actions.json');
 
 exports.run = async (bot, message, args) => {
+  try {
     function selfSlap() {
-        var rand = ['http://cdn.awwni.me/mz98.gif', 'https://media.giphy.com/media/UxFtCk3f62uGI/200.gif'];
-        return rand[Math.floor(Math.random() * rand.length)];
+      var rand = ['http://cdn.awwni.me/mz98.gif', 'https://media.giphy.com/media/UxFtCk3f62uGI/200.gif'];
+      return rand[Math.floor(Math.random() * rand.length)];
     }
 
     const recipient = args[0];
     var slap = actions.slapP[Math.round(Math.random() * (actions.slapP.length - 1))];
 
     if (!recipient) {
-        const embed = new Discord.RichEmbed()
-            .setColor('#FBCFCF')
-            .setImage(selfSlap());
-        return message.channel.send(`${message.author}, está se batendo?? wtf man`, embed);
-
+      const embed = new Discord.RichEmbed().setColor('#FBCFCF').setImage(selfSlap());
+      return message.channel.send(`${message.author}, está se batendo?? wtf man`, embed);
     } else if (message.mentions.users.first() == message.author) {
-        const embed = new Discord.RichEmbed()
-            .setColor('#FBCFCF')
-            .setImage(selfSlap());
-        return message.channel.send(`${message.author}, está se batendo?? wtf man`, embed);
-
+      const embed = new Discord.RichEmbed().setColor('#FBCFCF').setImage(selfSlap());
+      return message.channel.send(`${message.author}, está se batendo?? wtf man`, embed);
     } else if (message.mentions.users.first() == bot.user) {
-        const embed = new Discord.RichEmbed()
-            .setColor('#FBCFCF')
-            .setImage(slap);
-        return message.channel.send(`(；︿ ；✿) M-Me desculpe... por favor não bata em mim...`, embed);
-
+      const embed = new Discord.RichEmbed().setColor('#FBCFCF').setImage(slap);
+      return message.channel.send(`(；︿ ；✿) M-Me desculpe... por favor não bata em mim...`, embed);
     } else {
-        const embed = new Discord.RichEmbed()
-            .setColor('#FBCFCF')
-            .setImage(slap);
-        return message.channel.send(`${message.author} bateu em ${recipient}!`, embed);
+      const embed = new Discord.RichEmbed().setColor('#FBCFCF').setImage(slap);
+      return message.channel.send(`${message.author} bateu em ${recipient}!`, embed);
     }
-}
+  } catch (err) {
+    console.error(err);
+    return message.channel.send('Ocorreu um erro! Contate o administrador (Zanotto)!');
+  }
+};
 
 exports.help = {
-    name: "tapa",
-    description: "tapaço na boca fodase"
-}
+  name: 'tapa',
+  description: 'tapaço na boca fodase',
+};
